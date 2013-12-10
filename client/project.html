@@ -9,7 +9,10 @@
     <div>
       <em>{{createdAt}}</em>
     </div>
-    {{button action="edit" label="Edit"}}
+
+    {{#if currentUser}}
+      {{button action="edit" label="Edit"}}
+    {{/if}}
 
   {{else}}
 

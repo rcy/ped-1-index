@@ -3,15 +3,16 @@
 </head>
 
 <body>
-  <h1>Program Every Day</h1>
-
   <nav>
-    <ul>
-      <li>{{loginButtons}}</li>
-    </ul>
+    <div class="pull-right">{{currentUser.profile.email}} {{loginButtons}}</div>
   </nav>
 
+  <h1>Program Every Day</h1>
+
+  {{#if currentUser}}
   {{> addProject}}
+  {{/if}}
+
   {{> projectList}}
 
   <footer>

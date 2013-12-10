@@ -1,0 +1,33 @@
+<template name="project">
+  <h2>{{name}}</h2>
+
+  {{#unless editing}}
+
+    <p>{{description}}</p>
+    <a href="{{sourceUrl}}">source</a>
+    <a href="{{liveUrl}}">live</a>
+    <div>
+      <em>{{createdAt}}</em>
+    </div>
+    {{button action="edit" label="Edit"}}
+
+  {{else}}
+
+    <div>
+      {{input type="text" collection="Projects" field="name"}}
+    </div>
+    <div>
+      {{input type="text" collection="Projects" field="description"}}
+    </div>
+    <div>
+      {{input type="text" collection="Projects" field="sourceUrl"}}
+    </div>
+    <div>
+      {{input type="text" collection="Projects" field="liveUrl"}}
+    </div>
+
+    {{button action="done" label="Done"}}
+    {{button action="delete" label="Delete"}}
+
+  {{/unless}}
+</template>

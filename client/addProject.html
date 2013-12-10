@@ -1,0 +1,9 @@
+<template name="addProject">
+  {{#unless creating}}
+  <button>Add Project</button>
+  {{else}}
+  <label>
+    Name: <input name="name" type="text" />
+  </label>
+  {{/unless}}
+</template>
